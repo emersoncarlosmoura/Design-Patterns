@@ -1,38 +1,26 @@
 package padroesDeProjeto.padroes;
 
-import junit.framework.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+import designPattern.abstractfactory.MainAbstractFactory;
+import designPattern.factory.MainFactory;
+import designPattern.solid.dip.MainDip;
+import designPattern.solid.isp.MainIsp;
+import designPattern.solid.lsp.MainPayment;
+import designPattern.solid.ocp.MainOcp;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+@RunWith(Suite.class)
+@SuiteClasses({
+    MainDip.class,
+    MainIsp.class,
+    MainPayment.class,
+    MainAbstractFactory.class,
+    MainFactory.class,
+    MainOcp.class
+})
+public class AppTest extends TestCase {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
