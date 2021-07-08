@@ -10,10 +10,10 @@ import designPattern.builder.cars.SportCar;
 import designPattern.builder.cars.Truck;
 import designPattern.builder.director.Director;
 
-public class Main {
+public class MainBuilder {
 	
 	@Test
-	public void test () {
+	public void reatingCar () {
 		Director director = new Director();
 		
 		//criando o carro
@@ -22,11 +22,15 @@ public class Main {
 		
 		Car car = builder.getResult();
 		System.out.println(car.getCarType() + " produzido com sucesso!");
+	}
+	
+	public void creatingTrunck () {
+		Director director = new Director();
 		
 		//criando um caminhão
 		TruckBuilder truckBuilder = new TruckBuilder();
 		director.constructTruck(truckBuilder);
-		
+				
 		Truck truck = truckBuilder.getResult();
 		System.out.println("Caminhão: " + truck.result());
 	}
