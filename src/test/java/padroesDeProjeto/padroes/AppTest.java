@@ -5,6 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import designPattern.abstractfactory.MainAbstractFactory;
+import designPattern.adapter.MainAdapter;
 import designPattern.builder.MainBuilder;
 import designPattern.factory.MainFactory;
 import designPattern.solid.dip.MainDip;
@@ -21,7 +22,8 @@ import junit.framework.TestCase;
     MainAbstractFactory.class,
     MainFactory.class,
     MainOcp.class,
-    MainBuilder.class
+    MainBuilder.class,
+    MainAdapter.class
 })
 public class AppTest extends TestCase {
 
